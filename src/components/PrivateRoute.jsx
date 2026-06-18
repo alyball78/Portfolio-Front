@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { AuthContext } from '../context/AuthContext'
 import {jwtDecode} from "jwt-decode";
 import { isTokenValid } from '../utils/jwt.utils';
+import { Navigate } from 'react-router-dom';
 
     export default function PrivateRoute({ children, role }) {
         const { isAuthenticated, logout } = useContext(AuthContext)

@@ -1,14 +1,14 @@
 import { useForm } from "react-hook-form"
 import { useFetch } from "../../hooks/useFetch"
 import { useNavigate } from "react-router-dom"
-//import { toast } from "sonner";
+import { toast } from "sonner";
 import { useState } from "react";
 const CreateProjectPage = () => {
   const {
     register,
     handleSubmit,
     setError,
-    formState: { erors },
+    formState: { errors },
   } = useForm({ mode: "onTouch" });
   const navigate = useNavigate();
 
@@ -29,7 +29,7 @@ const CreateProjectPage = () => {
         return;
       }
 
-      //toast.success("Projet créé");
+      toast.success("Projet créé");
       navigate("/admin");
     } catch (error) {
       toast.error(error.message);

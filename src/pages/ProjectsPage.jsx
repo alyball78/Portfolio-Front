@@ -1,4 +1,4 @@
-    import React, {useState, useEffect} from 'React' 
+    import React, {useState, useEffect} from 'react' 
 import {useFetch} from '../hooks/useFetch'
   import ProjectCard from '../components/ProjectCard'
 
