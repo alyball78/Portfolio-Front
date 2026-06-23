@@ -21,7 +21,7 @@ const CreateProjectPage = () => {
       const response = await apiFetch("/projects", {
         method: "POST",
         body: JSON.stringify(data),
-      });
+      }); 
       if (response?.validationErrors) {
         response.validationErrors.forEach((validationError) => {
           setError(validationError.path, { message: validationError.msg });
